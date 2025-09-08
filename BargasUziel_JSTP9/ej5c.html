@@ -1,0 +1,38 @@
+<html>
+<head>
+    
+    <title>Conversor Monetario</title>
+    <script type="text/javascript" src="ej5c.js"></script>
+</head>
+<body>
+    <h1>Conversor Monetario</h1>
+    <button onclick="convertir('pesos a dolares')">Pesos a Dólares</button>
+    <button onclick="convertir('dolares a pesos')">Dólares a Pesos</button>
+    <button onclick="convertir('pesos a reales')">Pesos a Reales</button>
+    <button onclick="convertir('reales a pesos')">Reales a Pesos</button>
+    <button onclick="convertir('pesos a euros')">Pesos a Euros</button>
+    <button onclick="convertir('euros a pesos')">Euros a Pesos</button>
+
+    <br><br>
+    <textarea id="resultado" rows="8" cols="40"></textarea>
+
+    <script type="text/javascript">
+        function convertir(tipo) {
+            let cantidad = parseFloat(prompt("Ingrese el monto:"));
+            let resultado;
+
+            switch (tipo) {
+                case 'pesos a dolares': resultado = pesosADolares(cantidad); break;
+                case 'dolares  pesos': resultado = dolaresAPesos(cantidad); break;
+                case 'pesos a reales': resultado = pesosAReales(cantidad); break;
+                case 'reales a pesos': resultado = realesAPesos(cantidad); break;
+                case 'pesos a euros': resultado = pesosAEuros(cantidad); break;
+                case 'euros a pesos': resultado = eurosAPesos(cantidad); break;
+            }
+
+            document.getElementById("resultado").value += 
+                "Conversión " + tipo + ": " + resultado + "\n";
+        }
+    </script>
+</body>
+</html>

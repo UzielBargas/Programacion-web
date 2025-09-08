@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Ejercicio 7d</title>
+    <script type="text/javascript">
+        function factorial(n) {
+            if (n == 0) {
+                return 1;
+            } else {
+                return n * factorial(n - 1);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Función Factorial</h2>
+    <script type="text/javascript">
+        var numero = prompt("Ingrese un número para calcular su factorial:");
+        var n = parseInt(numero);
+        document.write("El factorial de " + n + " es: " + factorial(n));
+    </script>
+</body>
+</html>

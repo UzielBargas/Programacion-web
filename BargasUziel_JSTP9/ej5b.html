@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Calculadora</title>
+          <script type="text/javascript" src="ej5.js">
+          </script>
+    </head>
+    <body>
+         <h1>Resultados</h1>
+    <button onclick="calcular('suma')">Suma</button>
+    <button onclick="calcular('resta')">Resta</button>
+    <button onclick="calcular('multiplicacion')">Multiplicación</button>
+    <button onclick="calcular('division')">División</button>
+    </body>
+    <br><br>
+    <textarea id="resultado" rows="10" cols="40"></textarea>
+     <script type="text/javascript">
+        function calcular(operacion) {
+            let x = parseFloat(prompt("Ingrese el primer número:"));
+            let y = parseFloat(prompt("Ingrese el segundo número:"));
+            let res;
+            switch (operacion) {
+                case 'suma': res = suma(x, y); break;
+                case 'resta': res = resta(x, y); break;
+                case 'multiplicacion': res = multiplicacion(x, y); break;
+                case 'division': res = division(x, y); break;
+            }
+            document.getElementById("resultado").value += 
+                `Resultado de ${operacion}: ${res}\n`;
+        }
+    </script>
+    </body>
+</html>

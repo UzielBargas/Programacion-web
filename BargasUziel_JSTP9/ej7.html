@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Ejercicio 7</title>
+        <script type="text/javascript">
+            var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
+                         "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            document.write("<h2>Con for</h2>");
+            for (var i = 0; i < meses.length; i++) {
+                document.write(meses[i] + "<br>");
+            }
+            document.write("<h2>Con while</h2>");
+            var j = 0;
+            while (j < meses.length) {
+                document.write(meses[j] + "<br>");
+                j++;
+            }
+            document.write("<h2>Con do while</h2>");
+            var k = 0;
+            do {
+                document.write(meses[k] + "<br>");
+                k++;
+            } while (k < meses.length);
+            document.write("<h2>Con for in</h2>");
+            for (var indice in meses) {
+                document.write(meses[indice] + "<br>");
+            }
+        </script>
+    </body>
+</html>
